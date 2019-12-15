@@ -6,7 +6,7 @@
   	<button type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbars" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler">
           <span class="navbar-toggler-icon"></span>
      </button>
-  <div id="navbarContent" class="collapse navbar-collapse">
+    <div id="navbarContent" class="collapse navbar-collapse">
     <ul class="navbar-nav mr-auto">
       <!-- Megamenu-->
       <li class="nav-item dropdown megamenu"><a id="megamneu" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle font-weight-bold text-uppercase">Categorias</a>
@@ -33,10 +33,8 @@
             </div>
           </div>
      	 </li>
-     	 </ul>
-        </div>
-
-    
+    	</ul>
+    </div>
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
         <a class="nav-link" href="#"><h5 style="color: white">Login</h5></a>
