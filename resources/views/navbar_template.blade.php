@@ -1,8 +1,7 @@
 <link rel="stylesheet" href="{{asset('resources/assets/css/megamenu.css')}}">
-<nav class="navbar  navbar-dark bg-dark navbar-expand" style="margin-top: 0.1%">
+<nav class="navbar  navbar-dark bg-dark navbar-expand fixed-top">
     <img class="align-self-center mr-2" src="resources\assets\images\logo.jpg" alt="Generic placeholder image" style="width: 2%;height: 2%">
     <a class="navbar-brand" href="#"><h3>Óculos Online</h3></a>
-    <a href="#" class="navbar-brand font-weight-bold d-block d-lg-none">MegaMenu</a>
   	<button type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbars" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler">
           <span class="navbar-toggler-icon"></span>
      </button>
@@ -13,22 +12,17 @@
         <div aria-labelledby="megamneu" class="dropdown-menu">
           <div class="container-fluid">
             <div class="row">
-              <div class="col-6">
+              <div class="col">
                 <h6 class="font-weight-bold text-uppercase">Óculos de Sol</h6>
                 <ul class="list-unstyled">
                   <li class="nav-item"><a href="" class="nav-link text-small" style="color: black">Homem</a></li>
                   <li class="nav-item"><a href="" class="nav-link text-small" style="color: black">Mulher</a></li>
                   <li class="nav-item"><a href="" class="nav-link text-small" style="color: black">Criança</a></li>
+                  <li class="dropdown-submenu"><a href="" class="nav-link text-small" style="color: black">Marcas</a>
+                  		<li><a href="" class="nav-link text-small" style="color: black">Criança</a></li>
+				  </li>
                 </ul>
-              </div> 
-              <div class="col-6">
-                <h6 class="font-weight-bold text-uppercase">Óculos de Sol</h6>
-                <ul class="list-unstyled">
-                  <li class="nav-item"><a href="" class="nav-link text-small" style="color: black">Homem</a></li>
-                  <li class="nav-item"><a href="" class="nav-link text-small" style="color: black">Mulher</a></li>
-                  <li class="nav-item"><a href="" class="nav-link text-small" style="color: black">Criança</a></li>
-                </ul>
-              </div>   
+              </div>  
             </div>  
             </div>
           </div>
