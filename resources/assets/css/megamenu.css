@@ -10,4 +10,5 @@
 .megamenu .dropdown-menu {
   background: white;
   border: none;
+  width: 300px !important;
 }
