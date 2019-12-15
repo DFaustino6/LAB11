@@ -21,7 +21,7 @@
                   <li class="nav-item"><a href="" class="nav-link text-small" style="color: black">Criança</a></li>
                 </ul>
               </div> 
-              <div class="col-6 mr-3">
+              <div class="col-6">
                 <h6 class="font-weight-bold text-uppercase">Óculos de Sol</h6>
                 <ul class="list-unstyled">
                   <li class="nav-item"><a href="" class="nav-link text-small" style="color: black">Homem</a></li>
