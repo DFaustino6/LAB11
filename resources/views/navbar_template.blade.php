@@ -5,7 +5,7 @@
     <a href="#" class="navbar-brand font-weight-bold d-block d-lg-none">MegaMenu</a>
   	<button type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbars" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler">
           <span class="navbar-toggler-icon"></span>
-      </button>
+     </button>
   <div id="navbarContent" class="collapse navbar-collapse">
     <ul class="navbar-nav mr-auto">
       <!-- Megamenu-->
@@ -32,9 +32,11 @@
             </div>  
             </div>
           </div>
+     	 </li>
+     	 </ul>
         </div>
-      </li>
-    </ul>
+
+    
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
         <a class="nav-link" href="#"><h5 style="color: white">Login</h5></a>
