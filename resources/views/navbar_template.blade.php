@@ -1,6 +1,4 @@
-<div>
-	<img src="resources\assets\images\cabeça.jpg" style="width: 100%;height: 350px">
-</div>
+
 <nav class="navbar  navbar-dark bg-dark navbar-expand" style="margin-top: 0.1%">
     <img class="align-self-center mr-2" src="resources\assets\images\logo.jpg" alt="Generic placeholder image" style="width: 2%;height: 2%">
     <a class="navbar-brand" href="#"><h3>Óculos Online</h3></a>
