@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Store_model; 
 use Illuminate\Support\Facades\Cookie;
 
-class IndexController extends Controller
+class Store extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -27,7 +27,6 @@ class IndexController extends Controller
                 'loginId' => session()->get('id'),
                 'MENU3' => 'Carrinho',
                 'href3' => '#',
-
             ); 
         }
         else{

@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="{{asset('resources/assets/css/megamenu.css')}}">
 <nav class="navbar  navbar-dark bg-dark navbar-expand fixed-top">
     <img class="align-self-center mr-2" src="{{asset('resources/assets/images/logo.jpg')}}" alt="Generic placeholder image" style="width: 2%;height: 2%">
-    <a class="navbar-brand" href="#"><h3>Óculos Online</h3></a>
+    <a class="navbar-brand" href="{{action('Store@index')}}"><h3>Óculos Online</h3></a>
   	<button type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbars" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler">
           <span class="navbar-toggler-icon"></span>
      </button>
