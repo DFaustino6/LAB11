@@ -10,7 +10,7 @@ class RegisterController extends Controller
     public function register(){
         $values = array(
             'MENU1' => 'Login',
-            'href1' => '#',
+            'href1' => 'login',
             'MENU2' => 'Register',
             'href2' => 'register',
             'MENU3' => 'Carrinho',

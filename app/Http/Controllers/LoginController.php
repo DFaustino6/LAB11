@@ -13,10 +13,9 @@ class LoginController extends Controller
             'MENU1' => 'Login',
             'href1' => 'login',
             'MENU2' => 'Register',
-            'href2' => 'store/register',
+            'href2' => 'register',
             'MENU3' => 'Carrinho',
-                'href3' => '#',
-
+            'href3' => '#',
          ); 
 
         return view('login_template',$values);

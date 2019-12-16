@@ -39,8 +39,7 @@ class IndexController extends Controller
             'products' => $db,
             'MENU3' => 'Carrinho',
             'href3' => '#',
-
-        );
+            );
         }  
         return view('index_template',$values);
     }
