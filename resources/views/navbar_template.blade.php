@@ -31,7 +31,7 @@
     </div>
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
-        <a class="nav-link" href="{{$href3}}"><i class="{{$MENU3}}"></i></a>
+        <a class="nav-link" href="{{$href3}}"><h5 style="color: white">{{$MENU3}}<i class="fal fa-shopping-cart"></i></h5></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="{{$href1}}"><h5 style="color: white">{{$MENU1}}</h5></a>

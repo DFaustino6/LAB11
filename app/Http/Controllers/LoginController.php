@@ -14,6 +14,9 @@ class LoginController extends Controller
             'href1' => 'login',
             'MENU2' => 'Register',
             'href2' => 'store/register',
+            'MENU3' => 'Carrinho',
+                'href3' => '#',
+
          ); 
 
         return view('login_template',$values);
@@ -31,6 +34,9 @@ class LoginController extends Controller
             'text_color' => 'green',
             'back_color' => '#00d269',
             'icon' => 'fas fa-sign-in-alt',
+            'MENU3' => 'Carrinho',
+            'href3' => '#',
+
          );
         
         $pwdHash=substr(md5($request->pwd),0,32);

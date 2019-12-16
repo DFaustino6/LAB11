@@ -25,6 +25,8 @@ class IndexController extends Controller
                 'href2' => 'store/logout',
                 'products' => $db,
                 'loginId' => session()->get('id'),
+                'MENU3' => 'Carrinho',
+                'href3' => '#',
 
             ); 
         }
@@ -35,6 +37,9 @@ class IndexController extends Controller
             'MENU2' => 'Register',
             'href2' => 'store/register',
             'products' => $db,
+            'MENU3' => 'Carrinho',
+            'href3' => '#',
+
         );
         }  
         return view('index_template',$values);

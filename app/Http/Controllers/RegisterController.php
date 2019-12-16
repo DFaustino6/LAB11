@@ -13,6 +13,9 @@ class RegisterController extends Controller
             'href1' => '#',
             'MENU2' => 'Register',
             'href2' => 'register',
+            'MENU3' => 'Carrinho',
+            'href3' => '#',
+
          );  
 
         return view('register_template',$values);
@@ -28,6 +31,9 @@ class RegisterController extends Controller
             'text_color' => 'green',
             'back_color' => '#00d269',
             'icon' => 'fas fa-check',
+            'MENU3' => 'Carrinho',
+            'href3' => '#',
+
          );
 
         $Username=$request->Username;

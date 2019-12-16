@@ -19,8 +19,10 @@ class LogoutController extends Controller
             'text_color' => 'black',
             'back_color' => '#ff9966',
             'icon' => 'fas fa-sign-out-alt',
-            'MENU3' => 'fal fa-shopping-cart',
+            'MENU3' => 'Carrinho',
             'href3' => '#',
+
+
          ); 
         Cookie::queue('siteAuth','',-1);
         return view('message_template',$values);
