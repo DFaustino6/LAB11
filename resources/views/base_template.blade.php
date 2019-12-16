@@ -6,6 +6,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
    <link rel="stylesheet" href="https://streamonion.com/kinnith/fontawesome/css/all.css%22%3E">
+   <link rel="stylesheet" href="https://streamonion.com/kinnith/fontawesome/css/all.css">
    <link rel = "icon" href = "resources\assets\images\logo.jpg" type = "image/x-icon"> 
    <title>Óculos Online</title>
 </head>

@@ -11,13 +11,13 @@
   </ol>
   <div class="carousel-inner" style="background-color: #e6e6e6">
     <div class="carousel-item active">
-      <img class="d-block " src="resources\assets\images\car1.jpg" alt="First slide" style="height: 500px;">
+      <img class="d-block " src="{{asset('resources/assets/images/car1.jpg')}}" alt="First slide" style="height: 500px;">
     </div>
     <div class="carousel-item">
-      <img class="d-block " src="resources\assets\images\car2.jpg" alt="Second slide" style="height: 500px;width: 950px">
+      <img class="d-block " src="{{asset('resources/assets/images/car2.jpg')}}" alt="Second slide" style="height: 500px;width: 950px">
     </div>
     <div class="carousel-item">
-      <img class="d-block " src="resources\assets\images\car3.jpg" alt="Third slide" style="height: 500px;">
+      <img class="d-block " src="{{asset('resources/assets/images/car3.jpg')}}" alt="Third slide" style="height: 500px;">
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">

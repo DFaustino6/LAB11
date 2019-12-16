@@ -1,6 +1,6 @@
 <div class="container-fluid">
-	@foreach($products as $product)
 		<div class="row mt-3">
+			@foreach($products as $product)
 			<div class="col-3 text-center mb-3">
 				<div class="card mx-auto border-dark" style="width: 400px">
 					<img class="mx-auto d-block" src="{{asset('resources/assets/images/'.$product->image)}}" style="width: 200px;height: 200px;">
@@ -10,6 +10,6 @@
 					</div>
 				</div>
 			</div>
+			@endforeach
 		</div>
-	@endforeach
 </div>

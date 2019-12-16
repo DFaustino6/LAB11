@@ -14,4 +14,12 @@ Route::get('/', function () {
     return view('welcome');
 }); 
 Route::get('/store', 'IndexController@index');
+Route::get('/store/register','RegisterController@register');
+Route::post('/store/register','RegisterController@register_action');
+
+Route::get('/store/login','LoginController@login');
+Route::post('/store/login','LoginController@login_action');
+
+Route::get('/store/logout', 'LogoutController@logout');
+
 ?>

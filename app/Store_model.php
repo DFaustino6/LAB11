@@ -25,13 +25,13 @@ class Store_model
         DB::insert($newUser);
     }
 
-    /*public static function check_pwd($Email,$pwdHash){
+    public static function check_pwd($Email,$pwdHash){
         $pass="SELECT * FROM users where email = '$Email' AND password_digest='$pwdHash'";
         $query=DB::select($pass);
         return $query;
-    }*/
+    }
 
-    /*public static function set_remember_digest($Email,$value){
+    public static function set_remember_digest($Email,$value){
         $setCookie="UPDATE users SET remember_digest='$value' WHERE email='$Email'";
         DB::update($setCookie);
     }
@@ -40,6 +40,6 @@ class Store_model
         $checkCookie="SELECT * FROM users WHERE remember_digest='$value'";
         $query=DB::select($checkCookie);
         return $query;
-    }*/
+    }
 }
 ?>
