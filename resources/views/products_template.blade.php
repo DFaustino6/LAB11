@@ -1,31 +1,44 @@
 <div class="container-fluid">
-	<div class="row ">
-		<div class="col-3 ">
-			<img class="mx-auto d-block" src="resources\assets\images\oculos1.jpg" style="width: 200px;height: 200px;">
-			<a href="">Adicionar ao carinho</a>
+	<div class="row mt-3">
+		<div class="col-3 text-center">
+			<div class="card mx-auto border-dark" style="width: 400px">			
+				<img class="mx-auto d-block" src="resources\assets\images\oculos1.jpg" style="width: 200px;height: 200px;">
+				<div class="card-body">
+					<h5 class="card-title">Oculos Rayban</h5>
+					<h5 class="card-title">100€</h5>
+					<a href="#" class="btn btn-primary btn-lg active mx-auto " role="button" aria-pressed="true">Adicionar ao Carrinho</a>
+				</div>
+			</div>
 		</div>
-		<div class="col-3 ">
-			<img class="mx-auto d-block" src="resources\assets\images\oculos2.jfif" style="width: 200px;height: 200px">
+		<div class="col-3 text-center">
+			<div class="card mx-auto border-dark" style="width: 400px">	
+				<img class="mx-auto d-block" src="resources\assets\images\oculos1.jpg" style="width: 200px;height: 200px;">
+				<div class="card-body">
+					<h5 class="card-title">Oculos Rayban</h5>
+					<h5 class="card-title">100€</h5>
+					<a href="#" class="btn btn-primary btn-lg active mx-auto " role="button" aria-pressed="true">Adicionar ao Carrinho</a>
+				</div>
+			</div>
 		</div>
-		<div class="col-3 ">
-			<img class="mx-auto d-block" src="resources\assets\images\oculos3.jpg" style="width: 200px;height: 200px">
+		<div class="col-3 text-center">
+			<div class="card mx-auto border-dark" style="width: 400px">
+				<img class="mx-auto d-block" src="resources\assets\images\oculos1.jpg" style="width: 200px;height: 200px;">
+				<div class="card-body">
+					<h5 class="card-title">Oculos Rayban</h5>
+					<h5 class="card-title">100€</h5>
+					<a href="#" class="btn btn-primary btn-lg active mx-auto " role="button" aria-pressed="true">Adicionar ao Carrinho</a>
+				</div>
+			</div>
 		</div>
-		<div class="col-3">
-			<img class="mx-auto d-block" src="resources\assets\images\oculos4.jfif" style="width: 200px;height: 200px">
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-3">
-			<img class="mx-auto d-block" src="resources\assets\images\oculos1.jpg" style="width: 200px;height: 200px">
-		</div>
-		<div class="col-3">
-			<img class="mx-auto d-block" src="resources\assets\images\oculos2.jfif" style="width: 200px;height: 200px">
-		</div>
-		<div class="col-3">
-			<img class="mx-auto d-block" src="resources\assets\images\oculos6.jpg" style="width: 200px;height: 200px">
-		</div>
-		<div class="col-3 ">
-			<img class="mx-auto d-block" src="resources\assets\images\oculos5.jfif" style="width: 200px;height: 200px">
+		<div class="col-3 text-center">
+			<div class="card mx-auto border-dark" style="width: 400px">				
+				<img class="mx-auto d-block" src="resources\assets\images\oculos1.jpg" style="width: 200px;height: 200px;">
+				<div class="card-body">
+					<h5 class="card-title">Oculos Rayban</h5>
+					<h5 class="card-title">100€</h5>
+					<a href="#" class="btn btn-primary btn-lg active mx-auto " role="button" aria-pressed="true">Adicionar ao Carrinho</a>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
