@@ -13,15 +13,14 @@ class IndexController extends Controller
      */
     public function index()
     {
-       /* $values = array(
-            'MENU1' => 'SubForum1',
-            'MENU2' => 'SubForum2',
-            'MENU3' => 'SubForum3',
-            'MENU4' => 'Login',
-            'href4' => '#',
-            'MENU5' => 'Register',
-            'href5' => '#',
-        );*/
-        return view('index_template');
+       $db=Store_model::get_posts();
+       $values = array(
+            'MENU1' => 'Login',
+            'href1' => '#',
+            'MENU2' => 'Register',
+            'href2' => '#',
+            'products' => $db
+        );
+        return view('index_template',$values);
     }
 }

@@ -31,10 +31,10 @@
     </div>
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
-        <a class="nav-link" href="#"><h5 style="color: white">Login</h5></a>
+        <a class="nav-link" href="{{$href1}}"><h5 style="color: white">{{$MENU1}}</h5></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#"><h5 style="color: white">Register</h5></a>
+        <a class="nav-link" href="{{$href2}}"><h5 style="color: white">{{$MENU2}}</h5></a>
       </li>
     </ul>
   </div>
