@@ -6,7 +6,7 @@
 					<img class="mx-auto d-block" src="{{asset('resources/assets/images/'.$product->image)}}" style="width: 200px;height: 200px;">
 					<div class="card-body">
 						<h5 class="card-title">{{$product->price}}€</h5>
-						<a href="{{action('CartItemInsert@cartItemInsert',$product->id)}}" class="btn btn-primary btn-lg active mx-auto " role="button" aria-pressed="true">Adicionar ao Carrinho</a>
+						<a href="" class="btn btn-primary btn-lg active mx-auto " role="button" aria-pressed="true">Adicionar ao Carrinho</a>
 					</div>
 				</div>
 			</div>

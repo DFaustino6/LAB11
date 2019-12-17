@@ -26,7 +26,7 @@ class Store extends Controller
                 'products' => $db,
                 'loginId' => session()->get('id'),
                 'MENU3' => 'Cart',
-                'href3' => '#',
+                'href3' => 'store/checkout',
                 'MENU4' => 'Orders',
                 'href4' => 'store/orders',
             ); 
@@ -39,9 +39,9 @@ class Store extends Controller
             'href2' => 'store/register',
             'products' => $db,
             'MENU3' => 'Cart',
-            'href3' => '#',
+            'href3' => 'store/checkout',
             'MENU4' => 'Orders',
-            'href4' => 'store/orders',
+            'href4' => 'orders',
 
             );
         }  
