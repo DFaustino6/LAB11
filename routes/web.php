@@ -24,7 +24,7 @@ Route::get('/store/logout', 'LogoutController@logout');
 
 Route::get('/store/orders', 'OrdersController@orders');
 
-Route::get('/store/checkout', 'CartItemInsert@carItemInsert');
+Route::get('/store/cart/add/{id}', 'CartItemInsert@cartItemInsert');
 
 
 

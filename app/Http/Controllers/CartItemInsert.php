@@ -6,10 +6,10 @@ use Illuminate\Http\Request;
 use App\Store_model; 
 use Illuminate\Support\Facades\Cookie;
 
-class CarItemInsertController extends Controller
+class CartItemInsert extends Controller
 {
-   public function carItemInsert($id){
-    
+   public function cartItemInsert($id){
+
         $db=Store_model::get_products();
         $cart= session()->get('cart');
         if(!$cart) {
