@@ -37,7 +37,7 @@
 					</div>
 				</div>
 				@else
-				<h2 class="text-center">Cart Empty</h2>
+				<h2 class="text-center">Cart Empty. Add some items!</h2>
 				@endif
 			</div>
 		</div>
