@@ -8,8 +8,25 @@ use Illuminate\Support\Facades\Cookie;
 
 class CarItemInsertController extends Controller
 {
-   public function carItemInsert(){
-        
+   public function carItemInsert($id){
+    
+        $db=Store_model::get_products();
+        $cart= session()->get('cart');
+        if(!$cart) {
+            $cart = [
+                    $id => [
+                        "name" => $product->name,
+                        "quantity" => 1,
+                        "price" => $product->price,
+                        "image" => $product->image
+                    ]
+            ];
+ 
+            session()->put('cart', $cart);
+ 
+            return redirect()->back()->with('success', 'Product added to cart successfully!');
+        }
+
         $values = array(
             'MENU1' => 'Login',
             'href1' => 'login',

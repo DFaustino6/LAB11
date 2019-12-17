@@ -22,4 +22,10 @@ Route::post('/store/login','LoginController@login_action');
 
 Route::get('/store/logout', 'LogoutController@logout');
 
+Route::get('/store/orders', 'OrdersController@orders');
+
+Route::get('/store/checkout', 'CartItemInsert@carItemInsert');
+
+
+
 ?>

@@ -14,8 +14,10 @@ class LoginController extends Controller
             'href1' => 'login',
             'MENU2' => 'Register',
             'href2' => 'register',
-            'MENU3' => 'Carrinho',
+            'MENU3' => 'Cart',
             'href3' => '#',
+            'MENU4' => 'Orders',
+            'href4' => '#',
          ); 
 
         return view('login_template',$values);
@@ -33,13 +35,15 @@ class LoginController extends Controller
             'text_color' => 'green',
             'back_color' => '#00d269',
             'icon' => 'fas fa-sign-in-alt',
-            'MENU3' => 'Carrinho',
+            'MENU3' => 'Cart',
             'href3' => '#',
+            'MENU4' => 'Orders',
+            'href4' => '#',
 
          );
         
         $pwdHash=substr(md5($request->pwd),0,32);
-        $nrows=Store_model::check_pwd($request->email,$pwdHash);
+        $nrows=Store_model::validate_user($request->email,$pwdHash);
         if(count($nrows)>0){
             session()->regenerate();
             session(['name' => $nrows[0]->name]);

@@ -13,8 +13,10 @@ class RegisterController extends Controller
             'href1' => 'login',
             'MENU2' => 'Register',
             'href2' => 'register',
-            'MENU3' => 'Carrinho',
+            'MENU3' => 'Cart',
             'href3' => '#',
+            'MENU4' => 'Orders',
+            'href4' => '#',
 
          );  
 
@@ -31,8 +33,10 @@ class RegisterController extends Controller
             'text_color' => 'green',
             'back_color' => '#00d269',
             'icon' => 'fas fa-check',
-            'MENU3' => 'Carrinho',
+            'MENU3' => 'Cart',
             'href3' => '#',
+            'MENU4' => 'Orders',
+            'href4' => '#',
 
          );
 

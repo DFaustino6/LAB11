@@ -25,7 +25,7 @@ class Store_model
         DB::insert($newUser);
     }
 
-    public static function check_pwd($Email,$pwdHash){
+    public static function validate_user($Email,$pwdHash){
         $pass="SELECT * FROM customers where email = '$Email' AND password_digest='$pwdHash'";
         $query=DB::select($pass);
         return $query;
@@ -41,5 +41,22 @@ class Store_model
         $query=DB::select($checkCookie);
         return $query;
     }
-}
+
+    public static function get_order_items($order_id){
+        $orders_items = "SELECT order_items.id,order_items.quantity,products.price,products.image,products.name  
+                   FROM products,order_items
+                   WHERE order_items.product_id=products.id AND order_items.order_id='$order_id'";
+        $query=DB::select($orders_items);
+        return $query;
+    }
+
+    public static function get_orders($customer_id){
+        $orders = "SELECT id,status,total,created_at 
+                         FROM orders 
+                         WHERE customer_id='$customer_id'";
+        $query=DB::select($orders);
+        return $query;
+    
+    }
+}   
 ?>

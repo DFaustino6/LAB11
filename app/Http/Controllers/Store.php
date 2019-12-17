@@ -13,7 +13,7 @@ class Store extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($id)
     {
        $db=Store_model::get_products();
        self::checkForCookie('siteAuth');
@@ -25,8 +25,10 @@ class Store extends Controller
                 'href2' => 'store/logout',
                 'products' => $db,
                 'loginId' => session()->get('id'),
-                'MENU3' => 'Carrinho',
+                'MENU3' => 'Cart',
                 'href3' => '#',
+                'MENU4' => 'Orders',
+                'href4' => 'store/orders',
             ); 
         }
         else{
@@ -36,8 +38,11 @@ class Store extends Controller
             'MENU2' => 'Register',
             'href2' => 'store/register',
             'products' => $db,
-            'MENU3' => 'Carrinho',
+            'MENU3' => 'Cart',
             'href3' => '#',
+            'MENU4' => 'Orders',
+            'href4' => 'store/orders',
+
             );
         }  
         return view('index_template',$values);

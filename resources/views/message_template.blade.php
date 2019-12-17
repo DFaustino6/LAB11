@@ -1,7 +1,7 @@
 @extends('base_template')
 @include('navbar_template')
 <head>
-  	<meta http-equiv="refresh" content="3; url={{action('IndexController@index')}}">
+  	<meta http-equiv="refresh" content="3; url={{action('Store@index')}}">
 </head>
 <div class="container" style="padding-top: 4%">
 	<div class="card mx-auto d-block" >

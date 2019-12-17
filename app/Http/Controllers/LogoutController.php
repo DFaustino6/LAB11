@@ -19,8 +19,10 @@ class LogoutController extends Controller
             'text_color' => 'black',
             'back_color' => '#ff9966',
             'icon' => 'fas fa-sign-out-alt',
-            'MENU3' => 'Carrinho',
+            'MENU3' => 'Cart',
             'href3' => '#',
+            'MENU4' => 'Orders',
+            'href4' => '#',
 
 
          ); 
