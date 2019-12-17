@@ -41,7 +41,7 @@ class Store extends Controller
             'MENU3' => 'Cart',
             'href3' => 'store/cart',
             'MENU4' => 'Orders',
-            'href4' => 'orders',
+            'href4' => 'store/orders',
 
             );
         }  

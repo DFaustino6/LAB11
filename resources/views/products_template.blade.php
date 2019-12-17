@@ -7,7 +7,7 @@
 					<div class="card-body">
 						<h5 class="card-title">{{$product->price}}€</h5>
 						<h5 class="card-title">{{$product->name}}</h5>
-						<a href="{{action('CartItemInsert@cartItemInsert',$product->id)}}" class="btn btn-primary btn-lg active mx-auto " role="button" aria-pressed="true" onclick="alert('Product added to cart successfully!')">Adicionar ao Carrinho</a>
+						<a href="{{action('CartItemInsert@cartItemInsert',$product->id)}}" class="btn btn-primary btn-lg active mx-auto " role="button" aria-pressed="true" onclick="alert('Product added to cart successfully!')">Add to the cart</a>
 					</div>
 				</div>
 			</div>

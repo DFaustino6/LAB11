@@ -17,33 +17,24 @@
 			      <th scope="col"></th>
 			    </tr>
 			  </thead>
-			  @foreach($orders as $order)
+			  @if(!isset($error))
+			  @foreach($db as $keyO => $order)
 				  <tbody class="text-center">
 				    <tr>
 				      <th scope="row">{{$order->id}}</th>
 				      <td>{{$order->created_at}}</td>
 				      <td>{{$order->total}}€</td>
 				      <td>{{$order->status}}</td>
-				      <td><button class="btn btn-link"  data-toggle="collapse" data-target="#details{{$order->id}}" class="clickable">Details</button>
+				      <td><a class="btn btn-link" class="clickable" href="{{action('OrdersController@order',$order->id)}}">Details</a>
         			  </td>
-				    </tr>
-				    <tr>
-				    	<td colspan="5">
-                             <div id="details{{$order_items[$loop->index]->id}}" class="collapse">
-                                  <div class="col-3 text-center mb-3">
-                                    <div class="card mx-auto border-dark" style="width: 200px">
-                                        <img class="mx-auto d-block" src="{{asset('resources/assets/images/'.$order_items[$loop->index]->image)}}" style="width: 100px;height: 100px;">
-                                        <div class="card-body">
-                                            <h5 class="card-title">{{$order_items[$loop->index	]->price}}€</h5>
-                                            <h5 class="card-title">{{$order_items[$loop->index	]->name}}</h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </td>
 				    </tr>	
 				  </tbody>	  
 			  @endforeach
+			  @else
+				<div class="card-body text-center">
+					<h2>No orders. Go buy some sunglasses!</h2>
+				</div>
+			  @endif
 			</table>
 		</div>
 	</div>

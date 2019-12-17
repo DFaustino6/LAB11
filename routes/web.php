@@ -31,9 +31,9 @@ Route::patch('update-cart','CartItemInsert@update');
 Route::delete('remove-from-cart','CartItemInsert@remove');
 
 
-Route::get('/store/checkout', 'CheckoutController@checkout');
+Route::get('/store/checkout/{total}', 'CheckoutController@checkout');
 
-
+Route::get('/store/order/{id}', 'OrdersController@order');
 
 
 ?>

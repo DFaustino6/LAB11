@@ -76,23 +76,34 @@ class CartItemInsert extends Controller
         }
     }
 
+    private function total(){
+        $total = 0;
+        if(session()->has('cart')) {
+          $cart = session()->get('cart');
+            foreach($cart as $details) {
+                $total = $total + ($details['quantity'] * $details['price']);
+            }
+        }
+      return $total;
+    }
+
     public function cartdisplay(){
+            $total=self::total();
             $db=Store_model::get_products();
             $values = array(
                 'MENU1' => 'Welcome'.' '.session()->get('name'),
                 'href1' => '#',
                 'MENU2' => 'Logout',
-                'href2' => 'store/logout',
+                'href2' => 'logout',
                 'loginId' => session()->get('id'),
                 'MENU3' => 'Cart',
-                'href3' => 'checkout',
+                'href3' => 'cart',
                 'MENU4' => 'Orders',
                 'href4' => 'orders',
+                'total' => $total,
                 'products' => $db,
             ); 
 
             return view('cart_template',$values);
-
-        
     }
 }

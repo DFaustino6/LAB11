@@ -43,7 +43,7 @@ class Store_model
     }
 
     public static function get_order_items($order_id){
-        $orders_items = "SELECT order_items.id,order_items.quantity,products.price,products.image,products.name  
+        $orders_items = "SELECT order_items.id,order_items.quantity,order_items.order_id,products.price,products.image,products.name  
                    FROM products,order_items
                    WHERE order_items.product_id=products.id AND order_items.order_id='$order_id'";
         $query=DB::select($orders_items);
@@ -53,7 +53,8 @@ class Store_model
     public static function get_orders($customer_id){
         $orders = "SELECT id,status,total,created_at 
                          FROM orders 
-                         WHERE customer_id='$customer_id'";
+                         WHERE customer_id='$customer_id'
+                         ORDER BY created_at DESC";
         $query=DB::select($orders);
         return $query;
     }
@@ -65,6 +66,23 @@ class Store_model
         $query=DB::select($product);
         return $query;
     } 
+    
+    public static function create_order($customer_id, $total){
+        $order = "INSERT INTO orders(customer_id,created_at,total)
+                  VALUES ('$customer_id',NOW(),$total)";
+        DB::insert($order);
+
+        $order = Self::get_orders($customer_id);
+        return $order[0]->id;
+    }
+
+    public static function insert_order_item($order_id, $product_id, $quantity){
+        $order_item = "INSERT INTO order_items(order_id,product_id,quantity)
+                  VALUES ('$order_id','$product_id','$quantity')";
+        return DB::insert($order_item);
+    }
+
+
 
 
 }   

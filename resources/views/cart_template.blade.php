@@ -17,7 +17,7 @@
 									<div class=" row mb-2">
 										<div class="col-4"></div>
 										<div class="col-4">
-											<input type="number" class="form-control quantity" value="{{$details['quantity']}}">
+											<input type="number" class="form-control {{$id}}" value="{{$details['quantity']}}">
 										</div>
 										<div class="col-4"></div>
 									</div>
@@ -31,13 +31,17 @@
 				<div class="row">
 					<div class="col-3"></div>
 					<div class="col-3"></div>
-					<div class="col-3"></div>
+					<div class="col-3 text-right">
+						<h3>Total:{{$total}}€</h3>
+					</div>
 					<div class="col-3">
-						<a href=""><a href="{{action('CheckoutController@checkout')}}" class="btn btn-primary btn-lg active mx-auto " role="button" aria-pressed="true">Checkout</a></a>
+						<a href=""><a href="{{action('CheckoutController@checkout',$total)}}" class="btn btn-primary btn-lg active mx-auto " role="button" aria-pressed="true">Checkout</a></a>
 					</div>
 				</div>
 				@else
-				<h2 class="text-center">Cart Empty. Add some items!</h2>
+				<div class="card-body text-center">
+					<h2>Cart Empty. Add some items!</h2>
+				</div>
 				@endif
 			</div>
 		</div>
@@ -56,7 +60,7 @@
             $.ajax({
                url: '{{ url('update-cart') }}',
                method: "patch",
-               data: {_token: '{{ csrf_token() }}', id: ele.attr("data-id"), quantity: ele.parents("div").find(".quantity").val()},
+               data: {_token: '{{ csrf_token() }}', id: ele.attr("data-id"), quantity: ele.parents("div").find("."+ele.attr("data-id")).val()},
                success: function (response) {
                    window.location.reload();
                }
