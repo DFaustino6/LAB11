@@ -22,7 +22,7 @@ class OrdersController extends Controller
                 'href2' => 'store/logout',
                 'loginId' => session()->get('id'),
                 'MENU3' => 'Cart',
-                'href3' => '#',
+                'href3' => 'checkout',
                 'MENU4' => 'Orders',
                 'href4' => '#',
                 'orders' => $db,

@@ -35,6 +35,7 @@
                                         <img class="mx-auto d-block" src="{{asset('resources/assets/images/'.$order_items[$loop->index]->image)}}" style="width: 100px;height: 100px;">
                                         <div class="card-body">
                                             <h5 class="card-title">{{$order_items[$loop->index	]->price}}€</h5>
+                                            <h5 class="card-title">{{$order_items[$loop->index	]->name}}</h5>
                                         </div>
                                     </div>
                                 </div>

@@ -10,33 +10,69 @@ class CartItemInsert extends Controller
 {
    public function cartItemInsert($id){
 
-        $db=Store_model::get_products();
+        $product=Store_model::get_product_information($id);
+        print_r($product);
+        
         $cart= session()->get('cart');
         if(!$cart) {
             $cart = [
                     $id => [
-                        "name" => $product->name,
+                        "name" => $product[0]->name,
                         "quantity" => 1,
-                        "price" => $product->price,
-                        "image" => $product->image
+                        "price" => $product[0]->price,
+                        "image" => $product[0]->image
                     ]
             ];
  
             session()->put('cart', $cart);
  
-            return redirect()->back()->with('success', 'Product added to cart successfully!');
+            return redirect()->back();
         }
 
-        $values = array(
-            'MENU1' => 'Login',
-            'href1' => 'login',
-            'MENU2' => 'Register',
-            'href2' => 'store/register',
-            'MENU3' => 'Carrinho',
-            'href3' => '#',
+        if(isset($cart[$id])) {
+ 
+            $cart[$id]['quantity']++;
+ 
+            session()->put('cart', $cart);
+ 
+            return redirect()->back();
+ 
+        }
 
-         ); 
+         $cart[$id] = [
+            "name" => $product->name,
+            "quantity" => 1,
+            "price" => $product->price,
+            "photo" => $product->photo
+        ];
 
-        return view('index_template',$values);
+        session()->put('cart', $cart);
+ 
+        return redirect()->back();
+    }
+
+
+
+         return redirect()->back();
+    }
+
+    public function cartdisplay(){
+            $db=Store_model::get_products();
+            $values = array(
+                'MENU1' => 'Welcome'.' '.session()->get('name'),
+                'href1' => '#',
+                'MENU2' => 'Logout',
+                'href2' => 'store/logout',
+                'loginId' => session()->get('id'),
+                'MENU3' => 'Cart',
+                'href3' => 'checkout',
+                'MENU4' => 'Orders',
+                'href4' => '#',
+                'products' => $db,
+            ); 
+
+            return view('cart_template',$values);
+
+        
     }
 }

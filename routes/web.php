@@ -25,8 +25,11 @@ Route::get('/store/logout', 'LogoutController@logout');
 Route::get('/store/orders', 'OrdersController@orders');
 
 Route::get('/store/cart/add/{id}', 'CartItemInsert@cartItemInsert');
+Route::get('/store/cart', 'CartItemInsert@cartdisplay');
 
-Route::get('/store/checkout', 'CheckoutController@checkout');
+//Route::get('/store/checkout', 'CheckoutController@checkout');
+
+
 
 
 ?>
