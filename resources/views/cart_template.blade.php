@@ -59,7 +59,7 @@
  	
             $.ajax({
                url: '{{ url('update-cart') }}',
-               method: "patch",
+               method: "post",
                data: {_token: '{{ csrf_token() }}', id: ele.attr("data-id"), quantity: ele.parents("div").find("."+ele.attr("data-id")).val()},
                success: function (response) {
                    window.location.reload();
@@ -75,7 +75,7 @@
             if(confirm("Are you sure")) {
                 $.ajax({
                     url: '{{ url('remove-from-cart') }}',
-                    method: "DELETE",
+                    method: "post",
                     data: {_token: '{{ csrf_token() }}', id: ele.attr("data-id")},
                     success: function (response) {
                         window.location.reload();

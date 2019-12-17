@@ -27,8 +27,8 @@ Route::get('/store/orders', 'OrdersController@orders');
 Route::get('/store/cart/add/{id}', 'CartItemInsert@cartItemInsert');
 Route::get('/store/cart', 'CartItemInsert@cartdisplay');
 
-Route::patch('update-cart','CartItemInsert@update');
-Route::delete('remove-from-cart','CartItemInsert@remove');
+Route::post('update-cart','CartItemInsert@update');
+Route::post('remove-from-cart','CartItemInsert@remove');
 
 
 Route::get('/store/checkout/{total}', 'CheckoutController@checkout');
