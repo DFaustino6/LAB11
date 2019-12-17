@@ -6,27 +6,80 @@
 			<h2>Cart</h2>
 			<div class="card-body">
 				<div class="row mt-3">
-					@foreach($products as $product)
-					<div class="col-3 text-center mb-3">
-						<div class="card mx-auto border-dark" style="width: 400px">
-							<img class="mx-auto d-block" src="{{asset('resources/assets/images/'.$product->image)}}" style="width: 200px;height: 200px;">
-							<div class="card-body">
-								<h5 class="card-title">{{$product->price}}€</h5>
-								<div class=" row mb-2">
-									<div class="col-4"></div>
-									<div class="col-4">
-										<input type="number" class="form-control quantity ">
+					@if(session('cart'))
+						@foreach(session('cart') as $id => $details)
+						<div class="col-3 text-center mb-3">
+							<div class="card mx-auto border-dark" style="width: 400px">
+								<img class="mx-auto d-block" src="{{asset('resources/assets/images/'.$details['image'])}}" style="width: 200px;height: 200px;">
+								<div class="card-body">
+									<h5 class="card-title">{{$details['price']}}€</h5>
+									<h5 class="card-title">{{$details['name']}}</h5>
+									<div class=" row mb-2">
+										<div class="col-4"></div>
+										<div class="col-4">
+											<input type="number" class="form-control quantity" value="{{$details['quantity']}}">
+										</div>
+										<div class="col-4"></div>
 									</div>
-									<div class="col-4"></div>
+									<button class="btn btn-primary update-cart" data-id="{{ $id }}">Update</button>
+									<button class="btn btn-danger remove-from-cart" data-id="{{ $id }}">Remove</button>
 								</div>
-								<a href="" class="btn btn-primary btn-lg active mx-auto " role="button" aria-pressed="true">Update</a>
-								<a href="" class="btn btn-danger btn-lg active mx-auto " role="button" aria-pressed="true">Clear</a>
 							</div>
 						</div>
-					</div>
-					@endforeach
+						@endforeach
 				</div>
+				<div class="row">
+					<div class="col-3"></div>
+					<div class="col-3"></div>
+					<div class="col-3"></div>
+					<div class="col-3">
+						<a href=""><a href="{{action('CheckoutController@checkout')}}" class="btn btn-primary btn-lg active mx-auto " role="button" aria-pressed="true">Checkout</a></a>
+					</div>
+				</div>
+				@else
+				<h2 class="text-center">Cart Empty</h2>
+				@endif
 			</div>
 		</div>
 	</div>
 </div>
+@section('scripts')
+ 
+ 
+    <script type="text/javascript">
+ 
+        $(".update-cart").click(function (e) {
+           e.preventDefault();
+ 
+           var ele = $(this);
+ 	
+            $.ajax({
+               url: '{{ url('update-cart') }}',
+               method: "patch",
+               data: {_token: '{{ csrf_token() }}', id: ele.attr("data-id"), quantity: ele.parents("div").find(".quantity").val()},
+               success: function (response) {
+                   window.location.reload();
+               }
+            });
+        });
+ 
+        $(".remove-from-cart").click(function (e) {
+            e.preventDefault();
+ 
+            var ele = $(this);
+ 
+            if(confirm("Are you sure")) {
+                $.ajax({
+                    url: '{{ url('remove-from-cart') }}',
+                    method: "DELETE",
+                    data: {_token: '{{ csrf_token() }}', id: ele.attr("data-id")},
+                    success: function (response) {
+                        window.location.reload();
+                    }
+                });
+            }
+        });
+ 
+    </script>
+ 
+@endsection

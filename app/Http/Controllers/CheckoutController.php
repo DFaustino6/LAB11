@@ -11,6 +11,7 @@ class CheckoutController extends Controller
     
     public function checkout()
     {
+       session()->forget('cart');
        $values = array(
             'MENU2' => 'Logout',
             'MENU1' => 'Welcome',

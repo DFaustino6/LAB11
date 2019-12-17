@@ -40,10 +40,10 @@ class CartItemInsert extends Controller
         }
 
          $cart[$id] = [
-            "name" => $product->name,
+            "name" => $product[0]->name,
             "quantity" => 1,
-            "price" => $product->price,
-            "photo" => $product->photo
+            "price" => $product[0]->price,
+            "image" => $product[0]->image
         ];
 
         session()->put('cart', $cart);
@@ -51,9 +51,29 @@ class CartItemInsert extends Controller
         return redirect()->back();
     }
 
-
-
-         return redirect()->back();
+    public function update(Request $request){
+        if($request->id and $request->quantity)
+        {
+            $cart = session()->get('cart');
+ 
+            $cart[$request->id]["quantity"] = $request->quantity;
+ 
+            session()->put('cart', $cart);
+        }
+    }
+ 
+    public function remove(Request $request){
+        if($request->id){
+ 
+            $cart = session()->get('cart');
+ 
+            if(isset($cart[$request->id])) {
+ 
+                unset($cart[$request->id]);
+ 
+                session()->put('cart', $cart);
+            }
+        }
     }
 
     public function cartdisplay(){
@@ -67,7 +87,7 @@ class CartItemInsert extends Controller
                 'MENU3' => 'Cart',
                 'href3' => 'checkout',
                 'MENU4' => 'Orders',
-                'href4' => '#',
+                'href4' => 'orders',
                 'products' => $db,
             ); 
 

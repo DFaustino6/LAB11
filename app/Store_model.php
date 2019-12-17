@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Cookie;
 class Store_model 
 {
     public static function get_products(){
-        $sql  = "SELECT price,image,id
+        $sql  = "SELECT price,image,id,name
              FROM products";
         $query=DB::select($sql);
         return $query;
