@@ -1,4 +1,4 @@
-@extends('base_template')
+	@extends('base_template')
 @include('navbar_template')
 <div class="container" style="padding-top: 4%">
 	<div class="card mx-auto d-block">

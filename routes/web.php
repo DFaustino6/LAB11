@@ -15,7 +15,7 @@ Route::get('/', function () {
 }); 
 Route::get('/store', 'Store@index');
 Route::get('/store/register','RegisterController@register');
-Route::post('/store/register','RegisterController@register_action');
+	
 
 Route::get('/store/login','LoginController@login');
 Route::post('/store/login','LoginController@login_action');
